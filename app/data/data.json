@@ -1,0 +1,179 @@
+[
+  {
+    "_meta": {
+      "type": "user_basic",
+      "description": "Standard user record matching the dataset structure",
+      "tags": ["valid", "baseline", "production"]
+    },
+    "id": 1,
+    "username": "alice_dev",
+    "email": "alice@example.com",
+    "role": "admin",
+    "api_key": "sk_test_1234567890abcdef",
+    "is_active": true,
+    "address": {
+      "street": "123 Code Ave",
+      "city": "Techville",
+      "country": "US",
+      "postal_code": "94105"
+    },
+    "created_at": "2025-01-15T10:30:00Z",
+    "last_login": "2025-04-10T08:15:00Z",
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "language": "en"
+    },
+    "tags": ["python", "fastapi", "pydantic"]
+  },
+  {
+    "_meta": {
+      "type": "user_basic",
+      "description": "Inactive user with minimal data",
+      "tags": ["valid", "edge-case", "inactive"]
+    },
+    "id": 2,
+    "username": "bob_user",
+    "email": "bob@example.com",
+    "role": "user",
+    "api_key": null,
+    "is_active": false,
+    "address": {
+      "street": "456 Data Lane",
+      "city": "CloudCity",
+      "country": "UK",
+      "postal_code": "SW1A 1AA"
+    },
+    "created_at": "2025-02-20T14:00:00Z",
+    "last_login": null,
+    "preferences": {
+      "theme": "light",
+      "notifications": false
+    },
+    "tags": ["javascript", "react"]
+  },
+  {
+    "_meta": {
+      "type": "user_enums",
+      "description": "User with enum fields and computed field sources",
+      "tags": ["valid", "computed-demo", "enum-demo"]
+    },
+    "id": 3,
+    "username": "charlie_mod",
+    "email": "charlie@example.com",
+    "first_name": "Charlie",
+    "last_name": "O'Connor",
+    "date_of_birth": "1992-08-14",
+    "role": "moderator",
+    "status": "active",
+    "is_premium": true,
+    "account_created": "2025-03-01T09:00:00Z",
+    "theme": "auto",
+    "notification_freq": "daily",
+    "address": {
+      "street": "789 Validation Blvd",
+      "city": "SchemaTown",
+      "country": "CA",
+      "postal_code": "M5V 2T6"
+    }
+  },
+  {
+    "_meta": {
+      "type": "order",
+      "description": "E-commerce order for serialization & computed pricing demo",
+      "tags": ["valid", "computed-order", "nested"]
+    },
+    "order_id": "ORD-2025-001",
+    "items": [
+      {"product_name": "Pydantic Mastery Course", "price": 149.99, "quantity": 1},
+      {"product_name": "FastAPI Cheatsheet", "price": 24.95, "quantity": 2}
+    ],
+    "tax_rate": 0.08,
+    "shipping_cost": 9.99,
+    "discount_code": "LAUNCH20",
+    "discount_percent": 0.15
+  },
+  {
+    "_meta": {
+      "type": "comment_thread",
+      "description": "Recursive comment structure for nested model demo",
+      "tags": ["valid", "recursive", "nested"]
+    },
+    "id": 101,
+    "author": "alice_dev",
+    "content": "How do I handle discriminated unions in Pydantic v2?",
+    "created_at": "2025-04-12T14:30:00Z",
+    "replies": [
+      {
+        "id": 102,
+        "author": "bob_user",
+        "content": "Use Field(discriminator='field_name') with Union types!",
+        "created_at": "2025-04-12T15:00:00Z",
+        "replies": [
+          {
+            "id": 103,
+            "author": "charlie_mod",
+            "content": "Make sure the discriminator field uses Literal types.",
+            "created_at": "2025-04-12T15:15:00Z",
+            "replies": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_meta": {
+      "type": "payment_profile",
+      "description": "Discriminated union payment methods demo",
+      "tags": ["valid", "discriminated-union", "security"]
+    },
+    "user_id": 1,
+    "primary_method": {
+      "type": "credit_card",
+      "is_default": true,
+      "nickname": "Personal Visa",
+      "card_brand": "visa",
+      "last_four": "4242",
+      "expiry_month": 12,
+      "expiry_year": 2027
+    },
+    "backup_methods": [
+      {
+        "type": "bank_transfer",
+        "is_default": false,
+        "bank_name": "First National",
+        "account_type": "checking",
+        "last_four": "8899",
+        "routing_number": "021000021"
+      },
+      {
+        "type": "crypto",
+        "currency": "USDC",
+        "wallet_address": "0x1234...abcd",
+        "network": "mainnet"
+      }
+    ]
+  },
+  {
+    "_meta": {
+      "type": "notification_config",
+      "description": "Complex nested union for notification preferences",
+      "tags": ["valid", "nested-union", "playground"]
+    },
+    "user_id": 1,
+    "global_enabled": true,
+    "channels": [
+      {
+        "channel": "email",
+        "enabled": true,
+        "address": "alice@example.com",
+        "frequency": "daily"
+      },
+      {
+        "channel": "push",
+        "enabled": true,
+        "device_tokens": ["token_abc123", "token_xyz789"]
+      }
+    ]
+  }
+]

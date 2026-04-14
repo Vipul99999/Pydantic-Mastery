@@ -1,0 +1,72 @@
+{
+  "basics.user": {
+    "valid": {
+      "basic": {
+        "id": 1,
+        "username": "alice_dev",
+        "email": "alice@example.com",
+        "role": "user",
+        "is_active": true
+      },
+      "with_address": {
+        "id": 2,
+        "username": "bob_user",
+        "email": "bob@company.org",
+        "role": "admin",
+        "api_key": "sk_prod_abcdef123456",
+        "address": {"street": "456 Dev Ln", "city": "TechCity", "country": "US", "postal_code": "94105"}
+      }
+    },
+    "invalid": {
+      "short_username": {"id": 1, "username": "ab", "email": "valid@example.com"},
+      "bad_email": {"id": 1, "username": "valid_user", "email": "not-an-email"},
+      "invalid_role": {"id": 1, "username": "valid_user", "email": "v@example.com", "role": "superadmin"}
+    }
+  },
+  "computed.profile": {
+    "valid": {
+      "standard": {
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "date_of_birth": "1990-05-15",
+        "is_premium": true,
+        "account_created": "2024-01-01T00:00:00Z",
+        "email": "alice@example.com"
+      },
+      "free_user": {
+        "first_name": "Bob",
+        "last_name": "Jones",
+        "date_of_birth": "1985-12-25",
+        "is_premium": false,
+        "account_created": "2023-06-15T10:30:00Z",
+        "email": "bob@example.com"
+      }
+    }
+  },
+  "config.strict": {
+    "valid_strict": {
+      "id": 1,
+      "username": "strict_user",
+      "email": "s@example.com",
+      "age": 28
+    },
+    "invalid_coercion": {
+      "id": "123",
+      "username": "strict_user",
+      "email": "s@example.com",
+      "age": 28
+    },
+    "invalid_extra": {
+      "id": 1,
+      "username": "strict_user",
+      "email": "s@example.com",
+      "age": 28,
+      "unknown_field": "test"
+    }
+  },
+  "adapter.validate": {
+    "List[int]": {"valid": [1, 2, 3, 4], "invalid": ["a", 2, "b"]},
+    "Email": {"valid": "user@example.com", "invalid": "invalid-email"},
+    "Dict[str, str]": {"valid": {"key1": "val1", "key2": "val2"}, "invalid": {"key1": 123}}
+  }
+}

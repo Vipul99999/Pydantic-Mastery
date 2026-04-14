@@ -1,0 +1,136 @@
+# ============================================================================
+# 🐍 PYTHON / BACKEND (FastAPI & Pydantic)
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.nox/
+.tox/
+
+# Type checkers / Linters
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# ============================================================================
+# ⚛️ FRONTEND (Vite + React + TypeScript + Node)
+# ============================================================================
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.vite/
+.cache/
+
+# Testing / Coverage
+coverage/
+lcov-report/
+.nyc_output/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDE caches
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ============================================================================
+# 🌐 IDEs & EDITORS
+# ============================================================================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+.project
+.settings/
+.classpath
+*.iml
+
+# ============================================================================
+# 🖥️ OS & SYSTEM FILES
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ============================================================================
+# 🔐 SECRETS & ENVIRONMENT
+# ============================================================================
+# NEVER commit secrets. Use .env.example for template.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# ============================================================================
+# 📦 DATA & TEMP FILES
+# ============================================================================
+# Local backups (if your app generates them)
+data/backups/
+*.bak
+*.tmp
+*.temp
+
+# ============================================================================
+# 📝 DOCUMENTATION & GENERATION
+# ============================================================================
+# Auto-generated docs (if you export them locally)
+docs/api.html
+docs/openapi-exported.json
+*.pdf
