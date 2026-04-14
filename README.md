@@ -56,7 +56,7 @@ pydantic-mastery/
 ---
 
 ## Demo of API with openapi:
- ![API Demo](.Pydanit-Mastery.gif)
+ ![API Demo](.Pydantic-Mastery.gif)
  
 ## 🧠 Pydantic v2 Features Demonstrated
 
