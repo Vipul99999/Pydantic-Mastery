@@ -8,7 +8,6 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
-
 ## 🚀 Quick Start
 
 ```bash
@@ -56,6 +55,9 @@ pydantic-mastery/
 
 ---
 
+## Demo of API with openapi:
+ ![API Demo](.Pydanit-Mastery.gif)
+ 
 ## 🧠 Pydantic v2 Features Demonstrated
 
 | Feature | File | Real-World Use Case |

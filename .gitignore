@@ -6,7 +6,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
+.myenv/
 # Distribution / packaging
 dist/
 build/
@@ -14,6 +14,10 @@ build/
 *.egg
 .eggs/
 *.whl
+myenv/
+__pycache__/
+*.pyc
+.env
 
 # Virtual environments
 .venv/
